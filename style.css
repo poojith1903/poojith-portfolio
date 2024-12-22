@@ -1,0 +1,612 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5dc;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Container styles */
+.header-container, .about-container, .work-container, 
+.resume-container, .coding-profiles-container, .contact-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Header Section */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(245, 245, 220, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+nav img {
+    height: 70px;
+    transition: transform 0.3s;
+}
+
+nav img:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: blueviolet;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover {
+    color: blueviolet;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Home section */
+#home {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-container {
+    width: 100%;
+    height: 100%;
+}
+
+.header-text {
+    padding-left: 50px;
+    padding-top: 300px;
+    text-align: start;
+}
+
+.header-text img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.header-text p {
+    font-size: 24px;
+    color: blueviolet;
+    margin-bottom: 15px;
+}
+
+.header-text h1 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.header-text h1 span {
+    color: blueviolet;
+}
+
+/* About section */
+#about {
+    padding: 50px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-col-1 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-col-1 img {
+    width:auto;
+    height: auto;
+    transition: transform 0.3s;
+    padding: 0 40px;
+}
+
+.about-col-1 img:hover {
+    transform: scale(1.02);
+}
+
+.about-col-2 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: cadetblue;
+    margin-bottom: 30px;
+}
+
+/* Tab styles */
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: blueviolet;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.3s;
+}
+
+.tab-links.active-link {
+    color: blueviolet;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.tab-contents ul li span {
+    color: blueviolet;
+    font-weight: 500;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Work section */
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.work-list div {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-list div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.work-list div i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: blueviolet;
+}
+
+.work-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: gap 0.3s;
+}
+
+.work-link:hover {
+    gap: 15px;
+}
+
+/* Contact section */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 30px;
+    min-width: 250px;
+    transition: transform 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: blueviolet;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 40px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: blueviolet;
+    transform: translateY(-5px);
+}
+
+/* Resume section */
+#resume {
+    padding: 40px;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.resume-download a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.resume-download a:hover {
+    background: #6a1b9a;
+    transform: translateY(-3px);
+}
+
+/* Coding profiles */
+.coding-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.coding-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.coding-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.coding-links a i {
+    color: white;
+}
+
+/* Responsive design */
+@media screen and (max-width: 750px) {
+    #header {
+        background-image: none;
+    }
+    
+    .header-text {
+        margin-top: 120px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .header-text img {
+        position: relative;
+        max-width: 300px;
+        margin: 0 auto 30px;
+        transform: none;
+        top: 0;
+        display: block;
+    }
+    
+    .header-text h1 {
+        font-size: 24px;
+        padding-right: 0;
+    }
+    
+    .header-text p {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(245, 245, 220, 0.95);
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-col-1 img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .about-col-1 {
+        text-align: center;
+    }
+    
+    .work-list {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .work-list div {
+        padding: 20px;
+    }
+    
+    .work-link {
+        font-size: 14px;
+    }
+
+    .tab-titles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tab-links {
+        margin: 10px 15px;
+        font-size: 15px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .contact-item {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .social-links {
+        gap: 20px;
+    }
+    
+    .social-links a {
+        font-size: 35px;
+    }
+    
+    .coding-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .coding-links a {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+/* Very small screens */
+@media screen and (max-width: 480px) {
+    .header-text img {
+        max-width: 240px;
+    }
+    
+    .header-text h1 {
+        font-size: 20px;
+    }
+    
+    .header-text p {
+        font-size: 16px;
+    }
+    
+    .about-col-1 img {
+        max-width: 240px;
+    }
+}
+
+/* Tablet optimization */
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+    .header-text {
+        padding-left: 30px;
+        padding-top: 200px;
+    }
+    
+    .header-text img {
+        max-width: 400px;
+        padding-left: 0;
+        right: 30px;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Landscape orientation */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    #home {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .header-text {
+        padding-top: 100px;
+        margin-top: 0;
+    }
+    
+    .header-text img {
+        position: relative;
+        max-width: 250px;
+        margin: 0 auto 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home, #about, #resume,  #contact {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Loading animations for images */
+.header-text img,
+.about-col-1 img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid blueviolet;
+    outline-offset: 2px;
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background: blueviolet;
+    color: white;
+}
