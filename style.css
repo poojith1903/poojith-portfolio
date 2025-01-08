@@ -182,6 +182,113 @@ nav ul li a:hover::after {
     padding: 30px;
 }
 
+/* Certifications section */
+#certifications {
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.certifications-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.certification-list {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    animation: marquee 30s linear infinite;
+    min-width: 100%;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee-wrapper:hover .certification-list {
+    animation-play-state: paused;
+}
+
+.certification-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 300px;
+    flex-shrink: 0;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.certification-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.certification-card p {
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.certification-card .cert-date {
+    color: #888;
+    font-size: 14px;
+    margin: 15px 0 20px;
+}
+
+.cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: 500;
+    transition: gap 0.3s;
+}
+
+.cert-link:hover {
+    gap: 12px;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+    .certification-card {
+        min-width: 260px;
+        padding: 20px;
+    }
+
+    .certification-list {
+        animation: marquee 20s linear infinite;
+    }
+}
+
+/* Added for better text wrapping */
+.certification-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
 /* Tab styles */
 .tab-titles {
     display: flex;
