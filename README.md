@@ -66,8 +66,8 @@ While this is primarily a personal portfolio, suggestions and feedback are welco
 
 ## 📬 Contact
 
-- **Email**: [your-email@example.com]
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- **Email**: [POOJTH1914@GMAIL.COM]
+- **LinkedIn**: [jangam poojith](https://www.linkedin.com/in/jangam-poojith-455a59294/)
 - **GitHub**: [@poojith1903](https://github.com/poojith1903)
 
 ## 📝 License
