@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Poojith Portfolio </title>
-    <meta name="description" content="Welcome to Poojith's Portfolio. Experienced Machine Learning Engineer and Web Developer from CBIT Hyderabad. View my projects in AI, ML, and Web Development.">
-    <meta name="keywords" content="Poojith Portfolio, CBIT Hyderabad, Machine Learning Engineer, Web Developer, AI Projects, Python Developer, Student Portfolio">
-    <meta name="author" content="Poojith">
+    <title>Jangam Poojith - AI/ML Engineer Portfolio</title>
+    <meta name="description" content="Welcome to Jangam Poojith's Portfolio. AI/ML Engineer and Web Developer from CBIT Hyderabad with 8.5 CGPA. Specialized in Quantum Computing, Deep Learning, and Web Development.">
+    <meta name="keywords" content="Jangam Poojith, CBIT Hyderabad, Machine Learning Engineer, AI Developer, Quantum Computing, Python Developer, Deep Learning, React Developer">
+    <meta name="author" content="Jangam Poojith">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Poojith Portfolio ">
-    <meta property="og:description" content="Explore Poojith's portfolio showcasing expertise in Machine Learning and Web Development. CBIT Hyderabad graduate with focus on AI and ML projects.">
+    <meta property="og:title" content="Jangam Poojith - AI/ML Engineer Portfolio">
+    <meta property="og:description" content="Explore Jangam Poojith's portfolio showcasing expertise in AI/ML, Quantum Computing, and Web Development. CBIT Hyderabad student with 8.5 CGPA.">
     <meta property="og:image" content="https://poojith-portfolio.com/personal_pic-removebg-preview.png">
     <meta property="og:url" content="https://poojith-portfolio.com">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Poojith Portfolio - Tech Innovator">
-    <meta name="twitter:description" content="Machine Learning Engineer and Web Developer from CBIT Hyderabad. View my latest projects and achievements.">
+    <meta name="twitter:title" content="Jangam Poojith - AI/ML Engineer Portfolio">
+    <meta name="twitter:description" content="AI/ML Engineer specializing in Quantum Computing and Deep Learning from CBIT Hyderabad.">
     <meta name="twitter:image" content="https://poojith-portfolio.com/personal_pic-removebg-preview.png">
     
     <!-- Favicon -->
@@ -32,7 +32,7 @@
     <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://poojith-portfolio.com">
     
-    <!-- Your existing stylesheets -->
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -51,15 +51,16 @@
     <div id="header">
         <div class="header-container">
             <nav>
-                <img src="JP-removebg-preview.png" alt="Logo">
+                <img src="JP-removebg-preview.png" alt="Jangam Poojith Logo">
                 <ul id="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#resume">Resume</a></li>
-                    
                 </ul>
-                <!-- Added mobile menu button -->
                 <button class="menu-btn" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -67,14 +68,19 @@
         </div>
     </div>
 
-    <!-- Home Section with improved structure -->
+    <!-- Home Section -->
     <div id="home">
         <div class="home-container">
             <div class="header-text">
-                <img src="personal_pic-removebg-preview.png">
-                
-                <h1>Hi, I'm <span>Poojith</span> <br>from CBIT College, Hyderabad</h1>
-                <p>Machine Learning Engineer and Web Developer</p>
+                <img src="personal_pic-removebg-preview.png" alt="Jangam Poojith">
+                <h1>Hi, I'm <span>Jangam Poojith</span><br>AI/ML Engineer from CBIT, Hyderabad</h1>
+                <p>Specializing in Quantum Computing, Deep Learning & Web Development</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3>8.5</h3>
+                        <p>CGPA</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -84,37 +90,41 @@
         <div class="about-container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="pic_2-removebg-preview.png" alt="Poojith">
+                    <img src="pic_2-removebg-preview.png" alt="Jangam Poojith">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am an undergraduate student enrolled in the bachelor's degree of Artificial Intelligence and Machine Learning. Proficient in Python, HTML, CSS, JavaScript, SQL, and Quantum Computing. I aim to apply my academic knowledge and gain practical experience in the fields of AI & ML and data science. Passionate about serving people, I have actively participated in the NSS club and a women's safety club.</p>
+                    <p>I am a B.E. Computer Science student specializing in Artificial Intelligence & Machine Learning at CBIT, Hyderabad, with a CGPA of 8.5/10. Proficient in Python, JavaScript, SQL, R, and Quantum Computing technologies. I'm passionate about developing AI solutions that solve real-world problems, particularly in healthcare and elderly care. My experience spans from quantum machine learning research to building responsive web applications.</p>
+                    
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links active-link" onclick="openTab('skills')">Technical Skills</p>
                         <p class="tab-links" onclick="openTab('education')">Education</p>
+                        <p class="tab-links" onclick="openTab('coursework')">Coursework</p>
                     </div>
-                    <!-- Updated tab contents with real information -->
+                    
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming</span><br>Python, JavaScript, SQL</li>
-                            <li><span>Machine Learning</span><br>Data Analysis, Model Development</li>
-                            <li><span>Web Development</span><br>HTML, CSS, React</li>
-                            <li><span>Database</span><br>MySQL, MongoDB</li>
+                            <li><span>Programming Languages</span><br>Python (NumPy, pandas, scikit-learn, Qiskit), R (ggplot2, dplyr), SQL, JavaScript</li>
+                            <li><span>Web Technologies</span><br>HTML5, CSS3, JavaScript, React.js, MongoDB</li>
+                            <li><span>Tools & Platforms</span><br>Git, VS Code, Power BI, Linux, Gradio</li>
+                            <li><span>Core Concepts</span><br>Machine Learning, Deep Learning, Quantum Computing, Image Processing</li>
+                            <li><span>Soft Skills</span><br>Team Leadership, Time Management, Research, Presentations</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2024</span><br>Scribble Solver Project Lead</li>
-                            <li><span>2023</span><br>Web Development Internship</li>
-                            <li><span>2023</span><br>Research Assistant - Quantum Computing</li>
-                        </ul>
-                    </div>
+                    
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2021 - Present</span><br>B.Tech in AI & ML - CBIT College</li>
-                            <li><span>2021</span><br>High School - Computer Science</li>
-                            <li><span>Certifications</span><br>Machine Learning (Coursera), Web Development (Udemy)</li>
+                            <li><span>2021 - 2025</span><br>B.E. Computer Science (AI & ML Specialization)<br>CBIT, Hyderabad - CGPA: 8.5/10</li>
+                            <li><span>2019 - 2021</span><br>Intermediate (MPC)<br>Narayana Junior College - 97%</li>
+                            <li><span>2019</span><br>SSC (Grade X)<br>Sumedha High School - CGPA: 9.0/10</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="coursework">
+                        <ul>
+                            <li><span>Core Subjects</span><br>Data Structures & Algorithms, Object-Oriented Programming</li>
+                            <li><span>AI/ML Subjects</span><br>Natural Language Processing, Reinforcement Learning, Image Processing</li>
+                            <li><span>Advanced Topics</span><br>Quantum Computing, Deep Learning, Operating Systems</li>
                         </ul>
                     </div>
                 </div>
@@ -122,122 +132,195 @@
         </div>
     </div>
 
-    <!-- Work Section with improved content -->
-    <div id="work">
+    <!-- Projects Section -->
+    <div id="projects">
         <div class="work-container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title">Featured Projects</h1>
             <div class="work-list">
-                <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Portfolio</h2>
-                    <p>Created a responsive portfolio website using modern web technologies.</p>
-                    <a href="https://poojith1903.github.io/poojith-portfolio/" target="_blank" class="work-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <!-- Added link to project repository -->
-                    <!---<a href="https://poojith-portfolio.netlify.app" target="_blank" class="work-link">
-                        Live Demo <i class="fas fa-external-link-alt"></i>
-                    </a>---->
+                <div class="project-card">
+                    <i class="fas fa-leaf"></i>
+                    <h2>EfficientDet-Based Medicinal Leaf Detection</h2>
+                    <p class="project-duration">Aug 2024 - Mar 2025</p>
+                    <p>Engineered a deep learning system achieving 94% accuracy in identifying 98 medicinal leaf species from 9,500+ images using EfficientDet-B0 architecture.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>EfficientDet</span>
+                        <span>Grad-CAM</span>
+                        <span>Gradio</span>
+                    </div>
+                    <a href="https://github.com/poojith1903/Efficientdet-medicinal-leaf-classification" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div>
-                    <i class="fas fa-brain"></i>
-                    <h2>Machine Learning</h2>
-                    <p>Developed Scribble Solver: An AI-powered handwriting recognition system.</p>
-                    <a href="https://github.com/poojith1903/mnst-dataset" target="_blank" class="work-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <!----<a href="https://scribble-solver-demo.herokuapp.com" target="_blank" class="work-link">
-                        Live Demo <i class="fas fa-external-link-alt"></i>
-                    </a>--->
+                
+                <div class="project-card">
+                    <i class="fas fa-users"></i>
+                    <h2>TRANQUIL Project - AICTE Lab</h2>
+                    <p class="project-duration">Nov - Dec 2024</p>
+                    <p>Architected an AI-powered web platform for elderly care that boosted user engagement by 30%. Engineered predictive health monitoring algorithms reducing emergency response times by 25%.</p>
+                    <div class="project-tech">
+                        <span>React.js</span>
+                        <span>AI/ML</span>
+                        <span>Healthcare</span>
+                        <span>Web Development</span>
+                    </div>
+                    
                 </div>
-                <div>
+                
+                
+                <div class="project-card">
                     <i class="fas fa-atom"></i>
-                    <h2>Research Work</h2>
-                    <p>Conducted comparative analysis of Classical and Quantum Computing approaches.</p>
-                    <a href="https://github.com/poojith1903/comparisoon-of-quantum-and-classical-computing-" target="_blank" class="work-link">
-                        View Research <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <!----<a href="research-paper.pdf" target="_blank" class="work-link">
-                        Read Paper <i class="fas fa-file-pdf"></i>
-                    </a>---->
+                    <h2>Quantum Machine Learning for Breast Cancer Classification</h2>
+                    <p class="project-duration">Research Project</p>
+                    <p>Designed quantum-enhanced ML algorithms achieving 96% accuracy, outperforming classical methods by 12% with 3x computational speedup.</p>
+                    <div class="project-tech">
+                        <span>Qiskit</span>
+                        <span>Python</span>
+                        <span>VQC</span>
+                        <span>QSVM</span>
+                    </div>
+                    <a href="https://github.com/poojith1903/comparisoon-of-quantum-and-classical-computing-" target="_blank" class="work-link">View Research <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <i class="fas fa-code"></i>
+                    <h2>Portfolio Website</h2>
+                    <p class="project-duration">Ongoing</p>
+                    <p>Constructed responsive portfolio with 98% mobile compatibility, 45% faster load times, and 60% organic traffic increase.</p>
+                    <div class="project-tech">
+                        <span>React.js</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="https://poojith1903.github.io/poojith-portfolio/" target="_blank" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <i class="fas fa-brain"></i>
+                    <h2>Scribble Solver</h2>
+                    <p class="project-duration">2023</p>
+                    <p>Developed AI-powered handwriting recognition system using MNIST dataset with high accuracy for digit classification.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>MNIST</span>
+                        <span>CNN</span>
+                    </div>
+                    <a href="https://github.com/poojith1903/mnst-dataset" target="_blank" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Resume Section with download tracking -->
-    <div id="resume">
-        <div class="resume-container">
-            <h1 class="sub-title">My Resume</h1>
-            <div class="resume-download">
-                <a href="Resume_1.pdf" download onclick="trackDownload()">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+    <!-- Leadership Section -->
+    <div id="leadership">
+        <div class="work-container">
+            <h1 class="sub-title">Leadership & Community Service</h1>
+            <div class="work-list">
+                <div class="project-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>AksharaMala - IIT Hyderabad</h2>
+                    <p class="project-duration">Nov 2022 - Feb 2023</p>
+                    <p>Directed educational program delivering 120+ hours of free online lessons to rural students, enhancing their academic performance and bridging the digital education gap.</p>
+                    <div class="project-tech">
+                        <span>Education Outreach</span>
+                        <span>Online Teaching</span>
+                        <span>Leadership</span>
+                        <span>Social Impact</span>
+                    </div>
+                    <a href="aksharamala.pdf" class="work-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>Event Coordinator - CBIT SURAKSHA</h2>
+                    <p class="project-duration">Mar 2022 - 2024</p>
+                    <p>Organized safety awareness workshops for women's safety, reaching numerous campus community members and creating a safer environment for all students.</p>
+                    <div class="project-tech">
+                        <span>Event Management</span>
+                        <span>Women's Safety</span>
+                        <span>Community Service</span>
+                        <span>Awareness</span>
+                    </div>
+                    <a href="#" class="work-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h2>Volunteer & Photography In-charge - NSS Club</h2>
+                    <p class="project-duration">Jan 2022 - 2024</p>
+                    <p>Participated in 15+ community service initiatives, contributed 200+ service hours, and organized blood donation camps serving the local community.</p>
+                    <div class="project-tech">
+                        <span>Community Service</span>
+                        <span>Photography</span>
+                        <span>Blood Donation</span>
+                        <span>Volunteering</span>
+                    </div>
+                    <a href="#" class="work-link">View Activities <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Add this section after the about section and before the work section -->
+    <!-- Certifications Section -->
     <div id="certifications">
         <div class="certifications-container">
-            <h1 class="sub-title">Certifications</h1>
+            <h1 class="sub-title">Certifications & Achievements</h1>
             <div class="marquee-wrapper">
                 <div class="certification-list">
                     <div class="certification-card">
-                        <h2>Tranquil</h2>
-                        <p>AICTE Idea lab</p>
+                        <h2>Tranquil Project</h2>
+                        <p>AICTE Idea Lab</p>
                         <p class="cert-date">2024</p>
                         <a href="Tranquil.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
+                    
                     <div class="certification-card">
-                        <h2>Srible Solver</h2>
-                        <p>AICTE Idea lab</p>
+                        <h2>Scribble Solver</h2>
+                        <p>AICTE Idea Lab</p>
                         <p class="cert-date">2023</p>
                         <a href="scribble solver.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
                     
-
+                    <div class="certification-card">
+                        <h2>AI Foundation</h2>
+                        <p>Hexart.ai</p>
+                        <p class="cert-date">2023</p>
+                        <a href="AI_Foundation-jangam_poojith (1).pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h2>AI Advanced</h2>
+                        <p>Hexart.ai</p>
+                        <p class="cert-date">2023</p>
+                        <a href="AI_Advance-jangam_poojith.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
                     <div class="certification-card">
                         <h2>Data Science Workshop</h2>
-                        <p>By IEEE,CBIT</p>
+                        <p>IEEE, CBIT</p>
                         <p class="cert-date">2023</p>
                         <a href="data science workshop.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
+                    
                     <div class="certification-card">
-                        <h2>Data Analytics and Visualization</h2>
+                        <h2>Data Analytics & Visualization</h2>
                         <p>Forage</p>
                         <p class="cert-date">2022</p>
                         <a href="DAV.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
                     
                     <div class="certification-card">
-
-                        <h2>AI Foundation</h2>
-                        <p>Hexart.ai</p>
-                        <p class="cert-date">2023</p>
-                        <a href="AI_Foundation-jangam_poojith (1).pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <div class="certification-card">
-                        <h2>AI Advance</h2>
-                        <p>Hexart.ai</p>
-                        <p class="cert-date">2023</p>
-                        <a href="AI_Advance-jangam_poojith.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <div class="certification-card">
                         <h2>Aksharamala</h2>
-                        <p>Akshara Daan under IIT Hyderabad and SCERT Telangana.</p>
+                        <p>IIT Hyderabad & SCERT Telangana</p>
                         <p class="cert-date">2023</p>
                         <a href="aksharamala.pdf" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    
                 </div>
-                
             </div>
         </div>
     </div>
 
-
-    <!-- Coding Profiles Section with better styling -->
+    <!-- Coding Profiles Section -->
     <div id="coding-profiles">
         <div class="coding-profiles-container">
             <h1 class="sub-title">Coding Profiles</h1>
@@ -249,16 +332,33 @@
                     <i class="fas fa-code"></i> LeetCode
                 </a>
                 <a href="https://www.codechef.com/users/poojith003" target="_blank">
-                    <i class="fa-solid fa-code"></i> codechef
+                    <i class="fas fa-code"></i> CodeChef
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Contact Section with form validation -->
+    <!-- Resume Section -->
+    <div id="resume">
+        <div class="resume-container">
+            <h1 class="sub-title">My Resume</h1>
+            <div class="resume-preview">
+                <p>Download my comprehensive resume to learn more about my experience, projects, and achievements.</p>
+            </div>
+            <div class="resume-download">
+                <a href="resume.pdf" download onclick="trackDownload()">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
     <div id="contact">
         <div class="contact-container">
-            <h1 class="sub-title">Contact Me</h1>
+            <h1 class="sub-title">Get In Touch</h1>
+            <p class="contact-description">I'm always open to discussing new opportunities, collaborations, or just having a conversation about AI, ML, and technology!</p>
+            
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone-alt"></i>
@@ -270,18 +370,25 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Hyderabad, India</span>
+                    <span>Hyderabad, Telangana, India</span>
                 </div>
             </div>
+            
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jangam-poojith-455a59294/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/poojith1903" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/poojith_1903/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jangam-poojith-455a59294/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/poojith1903" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/poojith_1903/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Updated JavaScript with better functionality -->
+    <!-- JavaScript -->
     <script>
         // Tab functionality
         function openTab(tabName) {
@@ -311,18 +418,50 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById("nav-menu").classList.remove("show");
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section, .project-card, .leadership-card').forEach(el => {
+            observer.observe(el);
         });
     </script>
 
-<script type="application/ld+json">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Poojith",
+      "name": "Jangam Poojith",
       "url": "https://poojith-portfolio.com",
       "image": "https://poojith-portfolio.com/personal_pic-removebg-preview.png",
       "sameAs": [
@@ -330,17 +469,17 @@
         "https://github.com/poojith1903",
         "https://www.instagram.com/poojith_1903/"
       ],
-      "jobTitle": "Machine Learning Engineer",
+      "jobTitle": "AI/ML Engineer",
       "worksFor": {
         "@type": "Organization",
         "name": "CBIT College"
       },
       "alumniOf": {
         "@type": "Organization",
-        "name": "CBIT College, Hyderabad"
+        "name": "Chaitanya Bharathi Institute of Technology, Hyderabad"
       },
-      "description": "Machine Learning Engineer and Web Developer specializing in AI, ML, and web development projects.",
-      "knowsAbout": ["Machine Learning", "Web Development", "Python", "JavaScript", "SQL", "Quantum Computing"]
+      "description": "AI/ML Engineer specializing in Quantum Computing, Deep Learning, and Web Development. CBIT student with 8.5 CGPA.",
+      "knowsAbout": ["Machine Learning", "Deep Learning", "Quantum Computing", "Web Development", "Python", "JavaScript", "React.js", "AI Research"]
     }
     </script>
 </body>
