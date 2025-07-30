@@ -651,6 +651,32 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
+.project-tech span, .project-card img {
+  margin-right: 8px;
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+
+.project-card img {
+  height: 28px;
+  display: inline-block;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(242, 200, 17, 0.16);
+  background: #fff;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+
+.project-card img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(242, 200, 17, 0.32);
+}
+
+.project-card .work-link {
+  margin-top: 10px;
+}
+
+
 /* Certifications section */
 #certifications {
     padding: 100px 0;
