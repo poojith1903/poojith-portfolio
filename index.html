@@ -44,118 +44,6 @@
         gtag('js', new Date());
         gtag('config', 'G-XXXXXXXXXX');
     </script>
-    
-    <style>
-        .featured-project {
-            background: var(--gradient-primary);
-            border: 2px solid var(--accent-color);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .featured-project::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            transition: var(--transition);
-            opacity: 0;
-        }
-        
-        .featured-project:hover::after {
-            animation: shimmer 1.5s ease-in-out;
-            opacity: 1;
-        }
-        
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        
-        .featured-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--accent-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        .featured-project h2,
-        .featured-project p,
-        .featured-project .project-duration {
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .featured-project .work-link {
-            color: white;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 25px;
-            border: 2px solid white;
-            transition: var(--transition);
-        }
-        
-        .featured-project .work-link:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: scale(1.05);
-        }
-        
-        .project-metrics {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-            padding: 15px 0;
-            border-top: 2px solid rgba(255,255,255,0.3);
-            position: relative;
-            z-index: 2;
-        }
-        
-        .metric-item {
-            text-align: center;
-            flex: 1;
-        }
-        
-        .metric-value {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: var(--accent-color);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .metric-label {
-            font-size: 0.8em;
-            opacity: 0.9;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .featured-project .project-tech span {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .featured-project .project-tech span:hover {
-            background: white;
-            color: var(--primary-color);
-        }
-    </style>
 </head>
 <body>
 
@@ -272,17 +160,6 @@
                             <div class="metric-label">KPI Dashboards</div>
                         </div>
                     </div>
-                    <div class="powerbi-embed">
-                        <iframe>
-                            width="1000" 
-                            height="600" 
-                            src="PASTE_YOUR_POWERBI_IFRAME_URL_HERE"
-                            frameborder="0" 
-                            allowFullScreen="true">
-                            
-                        </iframe>
-                    </div>
-
                     
                     <div class="project-tech">
                         <span>Power BI</span>
@@ -292,7 +169,7 @@
                         <span>Business Intelligence</span>
                         <span>Market Analysis</span>
                     </div>
-                    <a href="#norway-project-details" class="work-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="#norway-project-modal" class="work-link" onclick="openProjectModal()">View Project Details <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="project-card">
@@ -309,8 +186,18 @@
                     <a href="https://github.com/poojith1903/Efficientdet-medicinal-leaf-classification" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-        
-
+                <div class="project-card">
+                    <i class="fas fa-database"></i>
+                    <h2>Student Database Management in SQL</h2>
+                    <p class="project-duration">2024</p>
+                    <p>Implemented a comprehensive student database system using SQL. Includes table creation, data insertion, and advanced queries for student performance analysis.</p>
+                    <div class="project-tech">
+                        <span>SQL</span>
+                        <span>MySQL</span>
+                        <span>Database Design</span>
+                    </div>
+                    <a href="https://github.com/poojith1903/student_database_MS" target="_blank" class="work-link">View SQL Code <i class="fas fa-arrow-right"></i></a>
+                </div>
 
                 <div class="project-card">
                     <i class="fas fa-users"></i>
@@ -365,6 +252,111 @@
                         <span>CNN</span>
                     </div>
                     <a href="https://github.com/poojith1903/mnst-dataset" target="_blank" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Norway Project Modal -->
+    <div id="norway-project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-chart-line"></i> Norway Car Sales Analytics Dashboard</h2>
+                <p class="modal-subtitle">Comprehensive Business Intelligence Solution</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="project-overview">
+                    <h3>Project Overview</h3>
+                    <p>This project delivers a comprehensive Power BI dashboard analyzing car sales performance in the Norwegian automotive market. The solution provides actionable insights into brand performance, revenue generation, market share distribution, and sales trends across seven major automotive manufacturers.</p>
+                </div>
+
+                <div class="key-features">
+                    <h3>Key Features & Achievements</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <h4>Multi-Source Data Integration</h4>
+                            <p>Integrated Excel workbooks and CSV files with advanced data modeling techniques</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Interactive Visualizations</h4>
+                            <p>Dynamic brand selection, KPI tracking, and real-time dashboard updates</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calculator"></i>
+                            <h4>Advanced DAX Calculations</h4>
+                            <p>Complex business logic implementation for market share and revenue analysis</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Performance Optimization</h4>
+                            <p>Efficient data model design with optimized query performance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technical-details">
+                    <h3>Technical Implementation</h3>
+                    <div class="tech-sections">
+                        <div class="tech-section">
+                            <h4>Data Sources</h4>
+                            <ul>
+                                <li><strong>cars_dataset.xlsx:</strong> Vehicle specifications and brand metadata</li>
+                                <li><strong>Norway_car_sales_by_make.csv:</strong> Time-series sales data</li>
+                                <li><strong>Data Volume:</strong> 1.347M+ units analyzed across 7 major brands</li>
+                            </ul>
+                        </div>
+                        <div class="tech-section">
+                            <h4>Key Metrics & KPIs</h4>
+                            <ul>
+                                <li>Total Units Sold by Brand</li>
+                                <li>Revenue Generation Analysis</li>
+                                <li>Market Share Distribution</li>
+                                <li>Top 4 Revenue-Generating Models per Brand</li>
+                                <li>Temporal Sales Trends</li>
+                                <li>Brand Market Value Visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-impact">
+                    <h3>Business Impact</h3>
+                    <div class="impact-metrics">
+                        <div class="impact-item">
+                            <span class="impact-number">1.347M+</span>
+                            <span class="impact-label">Vehicle Units Analyzed</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-number">7</span>
+                            <span class="impact-label">Major Automotive Brands</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-number">6</span>
+                            <span class="impact-label">Interactive KPI Dashboards</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-number">100%</span>
+                            <span class="impact-label">Real-time Data Updates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technologies-used">
+                    <h3>Technologies & Tools</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Business Intelligence</span>
+                        <span class="tech-tag">Market Analysis</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Statistical Analysis</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -580,6 +572,25 @@
             // Add analytics tracking here if needed
         }
 
+        // Project modal functions
+        function openProjectModal() {
+            document.getElementById("norway-project-modal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeProjectModal() {
+            document.getElementById("norway-project-modal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById("norway-project-modal");
+            if (event.target == modal) {
+                closeProjectModal();
+            }
+        }
+
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -616,10 +627,6 @@
             });
         }, observerOptions);
 
-        // Observe all sections for animation
-        document.querySelectorAll('section, .project-card, .leadership-card').forEach(el => {
-            observer.observe(el);
-        });
     </script>
 
     <!-- Structured Data -->
