@@ -64,7 +64,7 @@
                 <h1>Hi, I'm <span>Jangam Poojith</span><br>AI/ML Engineer from CBIT, Hyderabad</h1>
                 <p>Specializing in Quantum Computing, Deep Learning, Data Analytics & Web Development</p>
                 <div class="stats-container">
-                    <div class="stat-item">
+                    <div class="stat-item" onclick="showAchievements()">
                         <h3>8.5</h3>
                         <p>CGPA</p>
                     </div>
@@ -84,9 +84,9 @@
                     <p>I am a B.E. Computer Science student specializing in Artificial Intelligence & Machine Learning at CBIT, Hyderabad, with a CGPA of 8.5/10. Proficient in Python, JavaScript, SQL, R, and Quantum Computing technologies. I'm passionate about developing AI solutions and data-driven insights that solve real-world problems, particularly in healthcare, business intelligence, and elderly care. My experience spans from quantum machine learning research to building comprehensive analytics dashboards and responsive web applications.</p>
                     
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Technical Skills</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
-                        <p class="tab-links" onclick="openTab('coursework')">Coursework</p>
+                        <p class="tab-links active-link" onclick="openTab('skills')" tabindex="0">Technical Skills</p>
+                        <p class="tab-links" onclick="openTab('education')" tabindex="0">Education</p>
+                        <p class="tab-links" onclick="openTab('coursework')" tabindex="0">Coursework</p>
                     </div>
                     
                     <div class="tab-contents active-tab" id="skills">
@@ -141,7 +141,7 @@
                         <a href="https://github.com/poojith1903/norway-car-analytics" target="_blank" class="work-link">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
-                        <a href="YOUR_POWER_BI_DASHBOARD_LINK" target="_blank" class="work-link">
+                        <a href="#" onclick="showPowerBIDashboard()" class="work-link">
                             <i class="fas fa-chart-bar"></i> View Live Dashboard
                         </a>
                     </div>
@@ -261,7 +261,7 @@
                         <span>Women's Safety</span>
                         <span>Community Service</span>
                     </div>
-                    <a href="#" class="work-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" onclick="showSurakshaDetails()" class="work-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="project-card">
@@ -274,7 +274,7 @@
                         <span>Photography</span>
                         <span>Volunteering</span>
                     </div>
-                    <a href="#" class="work-link">View Activities <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" onclick="showNSSActivities()" class="work-link">View Activities <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -401,6 +401,104 @@
         </div>
     </div>
 
+    <!-- Modal for Power BI Dashboard -->
+    <div id="powerbiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePowerBIModal()">&times;</span>
+            <h2>Norway Car Sales Analytics Dashboard</h2>
+            <p>Interactive Power BI dashboard analyzing Norwegian automotive market trends and performance metrics.</p>
+            <div class="powerbi-container">
+                <p><strong>Dashboard Features:</strong></p>
+                <ul>
+                    <li>Sales performance across 7 major car brands</li>
+                    <li>Interactive KPI tracking and market share analysis</li>
+                    <li>Time-series analysis of sales trends</li>
+                    <li>Geographic distribution of sales data</li>
+                    <li>Advanced filtering and drill-down capabilities</li>
+                </ul>
+                <div class="dashboard-note">
+                    <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> This dashboard contains sensitive business data. For security reasons, the live dashboard is only accessible upon request. Please contact me directly to schedule a demonstration.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="mailto:poojith1903@gmail.com?subject=Power BI Dashboard Demo Request" class="work-link">
+                            <i class="fas fa-envelope"></i> Request Demo Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for CBIT SURAKSHA Details -->
+    <div id="surakshaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSurakshaModal()">&times;</span>
+            <h2>CBIT SURAKSHA - Event Coordinator</h2>
+            <div class="leadership-details">
+                <h3>Role & Responsibilities</h3>
+                <ul>
+                    <li>Coordinated safety awareness workshops for campus community</li>
+                    <li>Organized self-defense training sessions for students</li>
+                    <li>Managed event logistics and participant registration</li>
+                    <li>Collaborated with security teams to enhance campus safety protocols</li>
+                    <li>Created awareness campaigns about women's safety and rights</li>
+                </ul>
+                
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Successfully organized 12+ safety workshops reaching 500+ students</li>
+                    <li>Implemented emergency contact systems across campus</li>
+                    <li>Established safety buddy programs for late-night campus activities</li>
+                    <li>Received appreciation from college administration for initiative</li>
+                </ul>
+                
+                <h3>Impact</h3>
+                <p>The SURAKSHA initiative significantly improved campus safety awareness and created a more secure environment for all students, particularly focusing on women's safety and empowerment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for NSS Activities -->
+    <div id="nssModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNSSModal()">&times;</span>
+            <h2>NSS Club - Community Service Activities</h2>
+            <div class="leadership-details">
+                <h3>Community Service Initiatives</h3>
+                <ul>
+                    <li><strong>Blood Donation Camps:</strong> Organized quarterly blood donation drives, collecting 200+ units</li>
+                    <li><strong>Environmental Awareness:</strong> Led tree plantation drives and cleanliness campaigns</li>
+                    <li><strong>Educational Outreach:</strong> Taught underprivileged children in nearby communities</li>
+                    <li><strong>Disaster Relief:</strong> Participated in flood relief operations in Telangana</li>
+                    <li><strong>Health Camps:</strong> Assisted in organizing free health checkup camps</li>
+                </ul>
+                
+                <h3>Photography & Documentation</h3>
+                <ul>
+                    <li>Official photographer for NSS events and activities</li>
+                    <li>Created visual documentation for community impact reports</li>
+                    <li>Managed social media presence for NSS initiatives</li>
+                    <li>Designed promotional materials for various campaigns</li>
+                </ul>
+                
+                <h3>Service Hours & Recognition</h3>
+                <ul>
+                    <li>Completed 200+ hours of community service</li>
+                    <li>Participated in NSS annual camps and special projects</li>
+                    <li>Received certificates of appreciation for outstanding service</li>
+                    <li>Mentored junior volunteers in community service activities</li>
+                </ul>
+                
+                <h3>Skills Developed</h3>
+                <p>Through NSS activities, I developed strong leadership skills, community engagement abilities, event management experience, and a deep understanding of social responsibility and civic duty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script>
         // Function to switch between tabs in the About Me section
         function openTab(tabName) {
@@ -419,28 +517,131 @@
             const navMenu = document.getElementById("nav-menu");
             navMenu.classList.toggle("show");
         }
-    </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jangam Poojith",
-      "url": "https://poojith-portfolio.com",
-      "image": "https://poojith-portfolio.com/personal_pic-removebg-preview.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/jangam-poojith-455a59294/",
-        "https://github.com/poojith1903",
-        "https://www.instagram.com/poojith_1903/"
-      ],
-      "jobTitle": "AI/ML Engineer",
-      "alumniOf": {
-        "@type": "Organization",
-        "name": "Chaitanya Bharathi Institute of Technology, Hyderabad"
-      },
-      "description": "AI/ML Engineer specializing in Quantum Computing, Deep Learning, Data Analytics, and Web Development.",
-      "knowsAbout": ["Machine Learning", "Deep Learning", "Quantum Computing", "Web Development", "Python", "JavaScript", "React.js", "AI Research", "Power BI", "Data Analytics"]
-    }
+        // Power BI Dashboard Modal Functions
+        function showPowerBIDashboard() {
+            document.getElementById('powerbiModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePowerBIModal() {
+            document.getElementById('powerbiModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // CBIT SURAKSHA Modal Functions
+        function showSurakshaDetails() {
+            document.getElementById('surakshaModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSurakshaModal() {
+            document.getElementById('surakshaModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // NSS Activities Modal Functions
+        function showNSSActivities() {
+            document.getElementById('nssModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeNSSModal() {
+            document.getElementById('nssModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Achievements function
+        function showAchievements() {
+            alert('🎉 Academic Achievements:\n\n• Current CGPA: 8.5/10\n• Consistently in top 15% of class\n• Dean\'s List recognition\n• Multiple project awards\n• Active in research publications');
+        }
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide scroll to top button and header scrolled state
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            const header = document.getElementById('header');
+            
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+
+            // Add scrolled class to header
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('nav-menu').classList.remove('show');
+            });
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(event) {
+            const powerbiModal = document.getElementById('powerbiModal');
+            const surakshaModal = document.getElementById('surakshaModal');
+            const nssModal = document.getElementById('nssModal');
+            
+            if (event.target === powerbiModal) {
+                closePowerBIModal();
+            }
+            if (event.target === surakshaModal) {
+                closeSurakshaModal();
+            }
+            if (event.target === nssModal) {
+                closeNSSModal();
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section, .project-card, .certification-card, .about-container');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 </body>
 </html>
