@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://poojith-portfolio.com/sitemap.xml
-
-# Protect private directories
-Disallow: /private/
-Disallow: /admin/
-Disallow: /backup/
-Disallow: /temp/
